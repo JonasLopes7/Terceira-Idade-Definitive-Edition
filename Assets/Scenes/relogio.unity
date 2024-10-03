@@ -203,7 +203,8 @@ Transform:
   m_LocalPosition: {x: 0.02, y: -0.04, z: 1}
   m_LocalScale: {x: 3.9416, y: 3.9416, z: 3.9416}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1637591690}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &552302173
@@ -216,6 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 552302175}
   - component: {fileID: 552302176}
+  - component: {fileID: 552302177}
   m_Layer: 0
   m_Name: RPponteiroG
   m_TagString: PBCerto
@@ -233,7 +235,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.08, y: -0.96, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.44315, y: 0.44315, z: 0.44315}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1637591690}
@@ -267,7 +269,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.04355502, y: -0.26133442}
@@ -283,6 +285,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5226676, y: 1.5226688}
   m_EdgeRadius: 0
+--- !u!50 &552302177
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552302173}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &794298992
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,7 +324,6 @@ GameObject:
   - component: {fileID: 794298995}
   - component: {fileID: 794298994}
   - component: {fileID: 794298993}
-  - component: {fileID: 794298997}
   m_Layer: 0
   m_Name: ponteiroG
   m_TagString: Untagged
@@ -346,7 +374,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.02177763, y: 0.010888994}
@@ -429,22 +457,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &794298997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 794298992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a58c885a4ecfcd429416d3487e94cb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hourHand: {fileID: 0}
-  minuteHand: {fileID: 0}
-  correctHourHandPosition: {x: 0, y: 0, z: 0}
-  correctMinuteHandPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &845088197
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1064172116}
   - component: {fileID: 1064172115}
+  - component: {fileID: 1064172117}
   m_Layer: 0
   m_Name: RPnumero
   m_TagString: numCerto
@@ -559,12 +572,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.20688921, y: 0}
   serializedVersion: 2
-  m_Radius: 0.7068892
+  m_Radius: 0.26431286
 --- !u!4 &1064172116
 Transform:
   m_ObjectHideFlags: 0
@@ -580,6 +593,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1637591690}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1064172117
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064172114}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1326441402
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,6 +630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1326441404}
   - component: {fileID: 1326441403}
+  - component: {fileID: 1326441405}
   m_Layer: 0
   m_Name: RPponteiroS
   m_TagString: PSCerto
@@ -626,7 +667,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000011920929, y: 0.16333401}
@@ -652,11 +693,38 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.10577315, y: 2.64, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.42548, y: 0.42548, z: 0.42548}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1637591690}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1326441405
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326441402}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1544953540
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,15 +841,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637591689}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.12577315, y: -0.7382791, z: 0.03891301}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.026835078, y: -0.17715624, z: -0.24383168}
+  m_LocalScale: {x: 0.25370407, y: 0.25370407, z: 0.25370407}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1064172116}
   - {fileID: 552302175}
   - {fileID: 1326441404}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 62819627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1642832005
 GameObject:
@@ -831,12 +899,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.03266692, y: 0}
   serializedVersion: 2
-  m_Radius: 0.92466855
+  m_Radius: 0.9337112
 --- !u!212 &1642832008
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -930,7 +998,6 @@ GameObject:
   - component: {fileID: 1871577827}
   - component: {fileID: 1871577826}
   - component: {fileID: 1871577825}
-  - component: {fileID: 1871577829}
   m_Layer: 0
   m_Name: ponteiroS
   m_TagString: Untagged
@@ -981,7 +1048,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.010888815}
@@ -1064,22 +1131,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1871577829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1871577824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a58c885a4ecfcd429416d3487e94cb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hourHand: {fileID: 0}
-  minuteHand: {fileID: 0}
-  correctHourHandPosition: {x: 0, y: 0, z: 0}
-  correctMinuteHandPosition: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1090,4 +1141,3 @@ SceneRoots:
   - {fileID: 794298996}
   - {fileID: 1871577828}
   - {fileID: 1642832009}
-  - {fileID: 1637591690}

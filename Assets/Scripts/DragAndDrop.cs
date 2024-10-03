@@ -8,32 +8,55 @@ public class DragAndDrop : MonoBehaviour
     private bool isDragging = false;
     public bool isCorrectlyPlaced = false;
     public string targetTag;
+    private Collider2D targetCollider;
 
     void OnMouseDown()
     {
-        startPosition = transform.position;
-        isDragging = true;
+        if (!isCorrectlyPlaced)
+        {
+            startPosition = transform.position;
+            isDragging = true;
+        }
     }
 
     void OnMouseDrag()
     {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.z = 0;
-        transform.position = mousePosition;
+        if (isDragging)
+        {
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePosition.z = 0;
+            transform.position = mousePosition;
+        }
     }
 
     void OnMouseUp()
     {
         isDragging = false;
-        Collider2D hitCollider = Physics2D.OverlapPoint(transform.position);
-        if (hitCollider != null && hitCollider.CompareTag(targetTag))
+
+        if (!isCorrectlyPlaced)
         {
-            transform.position = hitCollider.transform.position;
-            isCorrectlyPlaced = true;
+            transform.position = startPosition;
         }
         else
         {
-            transform.position = startPosition;
+            transform.position = targetCollider.transform.position;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag(targetTag))
+        {
+            targetCollider = other;
+            isCorrectlyPlaced = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag(targetTag))
+        {
+            targetCollider = null;
             isCorrectlyPlaced = false;
         }
     }

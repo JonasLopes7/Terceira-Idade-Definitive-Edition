@@ -4,44 +4,70 @@ using System.Collections.Generic;
 
 public class CardGenerator : MonoBehaviour
 {
-    public GameObject cardPrefab; 
-    public Transform cardParent; 
-    public int rows = 3; 
-    public int columns = 4; 
-    public List<string> animalWords; 
-    public List<string> normalWords; 
-    public int totalCards = 12; 
-    public int animalCardCount = 4; 
+    public GameObject cardPrefab;
+    public Transform cardParent;
+    public int rows = 3;
+    public int columns = 4;
+    public List<string> animalWords;
+    public List<string> normalWords;
+    public int totalCards = 12;
+    public int animalCardCount = 4;
 
-    private List<string> selectedWords; 
-    private List<string> selectedAnimalWords; 
+    private List<string> tempAnimalWords;
+    private List<string> tempNormalWords;
+    private List<string> selectedWords;
+    public List<string> currentAnimalCards;
 
     void Start()
     {
+        ResetGame();
+    }
+
+    void ResetGame()
+    {
+        tempAnimalWords = new List<string>(animalWords);
+        tempNormalWords = new List<string>(normalWords);
+
+        foreach (Transform child in cardParent)
+        {
+            Destroy(child.gameObject);
+        }
+
         GenerateCards();
     }
 
-    void GenerateCards()
+    public void IncreaseCards()
+    {
+        totalCards += 2;
+        animalCardCount += 1;
+        rows = 3;
+        columns = 2;
+    }
+
+    public void GenerateCards()
     {
         selectedWords = new List<string>();
-        selectedAnimalWords = new List<string>(); 
+        currentAnimalCards = new List<string>();
 
         for (int i = 0; i < animalCardCount; i++)
         {
-            int randomIndex = Random.Range(0, animalWords.Count);
-            selectedWords.Add(animalWords[randomIndex]);
-            selectedAnimalWords.Add(animalWords[randomIndex]); 
-            animalWords.RemoveAt(randomIndex); 
+            int randomIndex = Random.Range(0, tempAnimalWords.Count);
+            string animalWord = tempAnimalWords[randomIndex];
+            selectedWords.Add(animalWord);
+            currentAnimalCards.Add(animalWord);
+            tempAnimalWords.RemoveAt(randomIndex);
         }
 
+        // Sorteia as palavras normais
         for (int i = 0; i < totalCards - animalCardCount; i++)
         {
-            int randomIndex = Random.Range(0, normalWords.Count);
-            selectedWords.Add(normalWords[randomIndex]);
-            normalWords.RemoveAt(randomIndex);
+            int randomIndex = Random.Range(0, tempNormalWords.Count);
+            selectedWords.Add(tempNormalWords[randomIndex]);
+            tempNormalWords.RemoveAt(randomIndex);
         }
 
         Shuffle(selectedWords);
+
         CreateGrid();
     }
 
@@ -55,6 +81,7 @@ public class CardGenerator : MonoBehaviour
             list[randomIndex] = temp;
         }
     }
+    
 
     void CreateGrid()
     {
@@ -63,9 +90,8 @@ public class CardGenerator : MonoBehaviour
         float totalHeight = parentRect.rect.height;
         float cardWidth = totalWidth / columns;
         float cardHeight = totalHeight / rows;
-        float spacingX = cardWidth * 0.1f; 
-        float spacingY = cardHeight * 0.1f; 
-
+        float spacingX = cardWidth * 0.1f;
+        float spacingY = cardHeight * 0.1f;
         cardWidth -= spacingX;
         cardHeight -= spacingY;
 
@@ -77,10 +103,21 @@ public class CardGenerator : MonoBehaviour
             float xPos = (column * (cardWidth + spacingX)) - (totalWidth / 2) + (cardWidth / 2);
             float yPos = -(row * (cardHeight + spacingY)) + (totalHeight / 2) - (cardHeight / 2);
             newCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(xPos, yPos);
+
             Card cardScript = newCard.GetComponent<Card>();
             cardScript.word = selectedWords[i];
-            cardScript.isAnimal = selectedAnimalWords.Contains(cardScript.word);
-            cardScript.scoreValue = cardScript.isAnimal ? 10 : -5; 
+            cardScript.isAnimal = currentAnimalCards.Contains(cardScript.word);
+            cardScript.generator = this;
         }
+    }
+
+    public void OnWrongWordClick()
+    {
+        ResetGame();
+    }
+
+    public void OnAllAnimalsClicked()
+    {
+        ResetGame();
     }
 }

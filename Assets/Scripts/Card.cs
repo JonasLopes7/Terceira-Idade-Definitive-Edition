@@ -3,11 +3,11 @@ using UnityEngine.UI;
 
 public class Card : MonoBehaviour
 {
-    public string word; 
-    public bool isAnimal; 
-    public int scoreValue; 
-    
-    private CardManager cardManager; 
+    public string word;
+    public bool isAnimal;
+    public CardGenerator generator;
+
+    private CardManager cardManager;
 
     void Start()
     {
@@ -19,13 +19,20 @@ public class Card : MonoBehaviour
     {
         if (isAnimal)
         {
-            cardManager.UpdateScore(scoreValue);
+            cardManager.UpdateScore(10);
+            cardManager.CardClicked(isAnimal);
+            Destroy(gameObject);
+            generator.currentAnimalCards.Remove(word); 
+
+            if (generator.currentAnimalCards.Count == 0)
+            {
+                generator.OnAllAnimalsClicked();
+            }
         }
         else
         {
-            cardManager.UpdateScore(-Mathf.Abs(scoreValue));
+            cardManager.CardClicked(isAnimal);
+            generator.OnWrongWordClick();
         }
-
-        Destroy(gameObject);
     }
 }

@@ -228,24 +228,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 2573396255647887453, guid: b94e3d379736a4847857a426f071e2a8, type: 3}
   cardParent: {fileID: 371349499}
-  rows: 3
-  columns: 4
+  rows: 4
+  columns: 1
   animalWords:
   - Cavalo
-  - Cachorro
+  - Coelho
+  - Veado
   - Gato
-  - Galinha
-  - Peixe
   normalWords:
   - Cavaco
   - Filha da puta
   - n sei
   - desisto
-  - fds
-  - viado
-  - boiola
-  totalCards: 12
-  animalCardCount: 5
+  - pedro
+  - bosta
+  - cu
+  - buceta
+  totalCards: 4
+  animalCardCount: 1
+  currentAnimalCards: []
 --- !u!4 &412671211
 Transform:
   m_ObjectHideFlags: 0
@@ -337,7 +338,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -553, y: 459}
+  m_AnchoredPosition: {x: -131, y: 864}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &845088197
@@ -530,6 +531,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 470647198}
+  cardGenerator: {fileID: 412671210}
+  correctStreak: 0
 --- !u!4 &1632491647
 Transform:
   m_ObjectHideFlags: 0

@@ -10,6 +10,16 @@ public class DragAndDrop : MonoBehaviour
     public string targetTag;
     private Collider2D targetCollider;
 
+    void Start()
+    {
+        DragToRotate rotateScript = GetComponent<DragToRotate>();
+
+        if (rotateScript != null)
+        {
+            rotateScript.enabled = false;
+        }
+    }
+
     void OnMouseDown()
     {
         if (!isCorrectlyPlaced)

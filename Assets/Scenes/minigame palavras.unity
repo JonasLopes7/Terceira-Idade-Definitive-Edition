@@ -233,17 +233,17 @@ MonoBehaviour:
   animalWords:
   - Cavalo
   - Coelho
-  - Veado
+  - Lobo
   - Gato
   normalWords:
   - Cavaco
-  - Filha da puta
-  - n sei
-  - desisto
-  - sonico
-  - bosta
-  - cu
-  - buceta
+  - Casa
+  - Bolo
+  - Bola
+  - Carro
+  - "\xC1gua"
+  - Porta
+  - Pessoa
   totalCards: 4
   animalCardCount: 1
   currentAnimalCards: []
@@ -338,8 +338,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -131, y: 864}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -352, y: 913.99}
+  m_SizeDelta: {x: 76.44, y: 17.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &531791605
 PrefabInstance:
@@ -561,8 +561,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 525, y: 864}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 561, y: 918.08}
+  m_SizeDelta: {x: 122.49, y: 15.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1544953540
 GameObject:
@@ -796,7 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27a2eca81fa18b4a98e7f366e217fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 10
+  timeRemaining: 15
   timerText: {fileID: 853916862}
   panel: {fileID: 1641068737}
 --- !u!1 &1641068737

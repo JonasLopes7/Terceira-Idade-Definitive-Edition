@@ -11,5 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/jogo.unity
     guid: 56c639f33a39d7147975ac5765add161
+  - enabled: 1
+    path: Assets/Scenes/relogio.unity
+    guid: 008e68b80b4439f43b23b0eb970c53bf
+  - enabled: 1
+    path: Assets/Scenes/minigame palavras.unity
+    guid: 2c433adc92d2a9c45bd6561f131d81ae
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 571b97757dec0cc47b3c2698bda8162d, type: 2}

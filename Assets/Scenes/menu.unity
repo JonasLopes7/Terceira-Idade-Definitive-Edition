@@ -1545,6 +1545,10 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 520816535}
+    - target: {fileID: 6964740888068556141, guid: 17bed6ee88ec7f44398a424501a9e575, type: 3}
+      propertyPath: highScoreText
+      value: 
+      objectReference: {fileID: 520816535}
     - target: {fileID: 7079024998712791637, guid: 17bed6ee88ec7f44398a424501a9e575, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.63394827
@@ -1604,7 +1608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 18118157117189631, guid: ecff9e63a0d462c4ba94f728be866f32, type: 3}
       propertyPath: sceneNames.Array.data[0]
-      value: jogo
+      value: minigame palavras
       objectReference: {fileID: 0}
     - target: {fileID: 816603000038930832, guid: ecff9e63a0d462c4ba94f728be866f32, type: 3}
       propertyPath: m_Name

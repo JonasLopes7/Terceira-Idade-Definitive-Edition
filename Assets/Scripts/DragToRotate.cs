@@ -27,30 +27,27 @@ public class DragToRotate : MonoBehaviour
     }
 
     void OnMouseDown()
-    {
-        if (!enabled) return;
-        isDragging = true;
-    }
+{
+    if (!enabled) return;
+    isDragging = true;
+}
 
-    void OnMouseDrag()
-    {
-        if (!enabled) return;
+void OnMouseDrag()
+{
+    if (!enabled || !isDragging) return; // Verificação adicional aqui
 
-        if (isDragging)
-        {
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mousePosition.z = 0;
+    Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    mousePosition.z = 0;
 
-            Vector3 direction = mousePosition - pivotPoint.position;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+    Vector3 direction = mousePosition - pivotPoint.position;
+    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-            transform.RotateAround(pivotPoint.position, Vector3.forward, angle - transform.eulerAngles.z);
-        }
-    }
+    transform.RotateAround(pivotPoint.position, Vector3.forward, angle - transform.eulerAngles.z);
+}
 
-    void OnMouseUp()
-    {
-        if (!enabled) return;
-        isDragging = false;
-    }
+void OnMouseUp()
+{
+    if (!enabled) return;
+    isDragging = false;
+}
 }

@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class StatsMan : MonoBehaviour
 {
-    public Text scoreText; // Arraste o Text da UI para esse campo no inspector
+    public Text highScoreText;  // Arraste o componente Text para este campo no Inspector
 
     void Start()
     {
-        // Carrega a pontuação do PlayerPrefs
-        int finalScore = PlayerPrefs.GetInt("MiniGameScore", 0); // Padrão é 0 se não houver pontuação salva
+        // Puxa o high score salvo no PlayerPrefs
+        int highScore = PlayerPrefs.GetInt("HighScoreCard", 0);
 
-        // Atualiza o texto na UI com a pontuação final
-        scoreText.text = "Pontuação Final: " + finalScore.ToString();
+        // Exibe o high score no Text UI
+        highScoreText.text = "High Score: " + highScore;
     }
 }

@@ -6,35 +6,31 @@ public class PontaDoPonteiro : MonoBehaviour
 {
     public bool positioned = false;
     public string horaTag;
-    public Collider2D ponta;
+    private PonteiroMan ponteiroManager;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Encontra o manager na cena
+        ponteiroManager = FindObjectOfType<PonteiroMan>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag(horaTag))
+        if (other.CompareTag(horaTag) && !positioned)
         {
-            Debug.Log("Entrou");
             positioned = true;
+            // Notifica o manager que este ponteiro foi posicionado corretamente
+            ponteiroManager.PonteiroPosicionadoCorretamente();
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if(other.CompareTag(horaTag))
+        if (other.CompareTag(horaTag) && positioned)
         {
-            Debug.Log("Saiu");
             positioned = false;
+            // Notifica o manager que este ponteiro saiu da posição correta
+            ponteiroManager.PonteiroRemovidoDaPosicao();
         }
     }
 }

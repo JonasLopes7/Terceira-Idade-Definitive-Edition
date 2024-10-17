@@ -11,6 +11,8 @@ TagManager:
   - 3
   - 6
   - 9
+  - "Pe\xE7as"
+  - Spawns
   layers:
   - Default
   - TransparentFX

@@ -9,9 +9,15 @@ public class DragAndDrop : MonoBehaviour
     public bool isCorrectlyPlaced = false;
     public string targetTag;
     private Collider2D targetCollider;
+    private ObjectMan objectManager; // Referência ao ObjectMan
+
+    // Armazena a rotação inicial do objeto
+    private Quaternion initialRotation;
 
     void Start()
     {
+        initialRotation = transform.rotation; // Armazena a rotação inicial
+        objectManager = FindObjectOfType<ObjectMan>(); // Obter a referência ao ObjectMan
         DragToRotate rotateScript = GetComponent<DragToRotate>();
 
         if (rotateScript != null)
@@ -59,6 +65,9 @@ public class DragAndDrop : MonoBehaviour
         {
             targetCollider = other;
             isCorrectlyPlaced = true;
+
+            // Notifica o ObjectMan que este objeto foi posicionado corretamente
+            objectManager.IncrementCorrectlyPlacedCount();
         }
     }
 
@@ -68,6 +77,16 @@ public class DragAndDrop : MonoBehaviour
         {
             targetCollider = null;
             isCorrectlyPlaced = false;
+
+            // Notifica o ObjectMan que este objeto foi removido da posição correta
+            objectManager.DecrementCorrectlyPlacedCount();
         }
+    }
+
+    // Método para teleportar o objeto e resetar a rotação
+    public void Teleport()
+    {
+        transform.rotation = initialRotation; // Reseta a rotação para a inicial
+        Debug.Log("n aguento mais");
     }
 }

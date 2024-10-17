@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class CardManager : MonoBehaviour
 {
     public Text scoreText;
+    public Text scoreText2;
     private int score;
     private int totalAnimalCards;
+    private int highScore;
 
     public CardGenerator cardGenerator;
     public int correctStreak = 0;
@@ -16,12 +18,28 @@ public class CardManager : MonoBehaviour
     void Start()
     {
         cardGenerator = FindObjectOfType<CardGenerator>();
+
+        highScore = PlayerPrefs.GetInt("HighScoreCard", 0);
+
+        // Zera a pontuação inicial
+        score = 0;
+        scoreText.text = "Score: " + score;
+        scoreText2.text = "Score: " + score;
     }
 
     public void UpdateScore(int amount)
     {
         score += amount;
         scoreText.text = "Score: " + score;
+        scoreText2.text = "Score: " + score;
+
+        if (score > highScore)
+        {
+            highScore = score;
+            // Salva o novo high score no PlayerPrefs
+            PlayerPrefs.SetInt("HighScoreCard", highScore);
+            PlayerPrefs.Save();  // Garante que os dados sejam salvos
+        }
     }
 
     public void ResetAnimalCounter(int totalAnimals)

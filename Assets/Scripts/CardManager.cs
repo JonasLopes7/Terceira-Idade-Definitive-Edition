@@ -21,7 +21,6 @@ public class CardManager : MonoBehaviour
 
         highScore = PlayerPrefs.GetInt("HighScoreCard", 0);
 
-        // Zera a pontuação inicial
         score = 0;
         scoreText.text = "Score: " + score;
         scoreText2.text = "Score: " + score;
@@ -36,9 +35,8 @@ public class CardManager : MonoBehaviour
         if (score > highScore)
         {
             highScore = score;
-            // Salva o novo high score no PlayerPrefs
             PlayerPrefs.SetInt("HighScoreCard", highScore);
-            PlayerPrefs.Save();  // Garante que os dados sejam salvos
+            PlayerPrefs.Save();
         }
     }
 

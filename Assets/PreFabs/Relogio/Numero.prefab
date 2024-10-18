@@ -135,3 +135,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCorrectlyPlaced: 0
   targetTag: numCerto
+  hasIncremented: 0

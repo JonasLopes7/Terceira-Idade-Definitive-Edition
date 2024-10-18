@@ -9,15 +9,14 @@ public class DragAndDrop : MonoBehaviour
     public bool isCorrectlyPlaced = false;
     public string targetTag;
     private Collider2D targetCollider;
-    private ObjectMan objectManager; // Referência ao ObjectMan
-
-    // Armazena a rotação inicial do objeto
+    private ObjectMan objectManager;
     private Quaternion initialRotation;
+    public bool hasIncremented = false;
 
     void Start()
     {
-        initialRotation = transform.rotation; // Armazena a rotação inicial
-        objectManager = FindObjectOfType<ObjectMan>(); // Obter a referência ao ObjectMan
+        initialRotation = transform.rotation;
+        objectManager = FindObjectOfType<ObjectMan>();
         DragToRotate rotateScript = GetComponent<DragToRotate>();
 
         if (rotateScript != null)
@@ -49,13 +48,17 @@ public class DragAndDrop : MonoBehaviour
     {
         isDragging = false;
 
-        if (!isCorrectlyPlaced)
-        {
-            transform.position = startPosition;
-        }
-        else
+        if (isCorrectlyPlaced && targetCollider != null && !hasIncremented) // Verifica se já foi incrementado
         {
             transform.position = targetCollider.transform.position;
+
+            // Incrementa o contador apenas uma vez
+            objectManager.IncrementCorrectlyPlacedCount();
+            hasIncremented = true; // Marca como incrementado
+        }
+        else if (!isCorrectlyPlaced)
+        {
+            transform.position = startPosition;
         }
     }
 
@@ -65,9 +68,6 @@ public class DragAndDrop : MonoBehaviour
         {
             targetCollider = other;
             isCorrectlyPlaced = true;
-
-            // Notifica o ObjectMan que este objeto foi posicionado corretamente
-            objectManager.IncrementCorrectlyPlacedCount();
         }
     }
 
@@ -77,16 +77,13 @@ public class DragAndDrop : MonoBehaviour
         {
             targetCollider = null;
             isCorrectlyPlaced = false;
-
-            // Notifica o ObjectMan que este objeto foi removido da posição correta
-            objectManager.DecrementCorrectlyPlacedCount();
+            hasIncremented = false;
         }
     }
 
-    // Método para teleportar o objeto e resetar a rotação
     public void Teleport()
     {
-        transform.rotation = initialRotation; // Reseta a rotação para a inicial
+        transform.rotation = initialRotation;
         Debug.Log("n aguento mais");
     }
 }

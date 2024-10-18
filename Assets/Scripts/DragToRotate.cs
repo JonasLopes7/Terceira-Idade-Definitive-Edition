@@ -34,7 +34,7 @@ public class DragToRotate : MonoBehaviour
 
 void OnMouseDrag()
 {
-    if (!enabled || !isDragging) return; // Verificação adicional aqui
+    if (!enabled || !isDragging) return;
 
     Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     mousePosition.z = 0;

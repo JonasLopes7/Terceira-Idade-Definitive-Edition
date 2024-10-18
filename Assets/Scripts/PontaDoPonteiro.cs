@@ -10,7 +10,6 @@ public class PontaDoPonteiro : MonoBehaviour
 
     void Start()
     {
-        // Encontra o manager na cena
         ponteiroManager = FindObjectOfType<PonteiroMan>();
     }
 
@@ -19,7 +18,6 @@ public class PontaDoPonteiro : MonoBehaviour
         if (other.CompareTag(horaTag) && !positioned)
         {
             positioned = true;
-            // Notifica o manager que este ponteiro foi posicionado corretamente
             ponteiroManager.PonteiroPosicionadoCorretamente();
         }
     }
@@ -29,7 +27,6 @@ public class PontaDoPonteiro : MonoBehaviour
         if (other.CompareTag(horaTag) && positioned)
         {
             positioned = false;
-            // Notifica o manager que este ponteiro saiu da posição correta
             ponteiroManager.PonteiroRemovidoDaPosicao();
         }
     }

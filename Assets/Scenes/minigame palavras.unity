@@ -226,9 +226,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d89a4e64189b10e41a0a5381330e41b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardPrefab: {fileID: 2573396255647887453, guid: b94e3d379736a4847857a426f071e2a8, type: 3}
+  cardPrefab: {fileID: 593906663955633476, guid: b129507bf6a0bd74f8d9b44d8439c3c0, type: 3}
   cardParent: {fileID: 371349499}
-  rows: 4
+  rows: 3
   columns: 1
   animalWords:
   - Cavalo
@@ -244,7 +244,7 @@ MonoBehaviour:
   - "\xC1gua"
   - Porta
   - Pessoa
-  totalCards: 4
+  totalCards: 3
   animalCardCount: 1
   currentAnimalCards: []
 --- !u!4 &412671211

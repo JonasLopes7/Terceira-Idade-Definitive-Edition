@@ -38,9 +38,8 @@ public class CardGenerator : MonoBehaviour
 
     public void IncreaseCards()
     {
-        totalCards += 2;
-        animalCardCount += 1;
-        rows = 3;
+        totalCards += 1;
+        rows = 2;
         columns = 2;
     }
 

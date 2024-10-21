@@ -6,6 +6,7 @@ public class Bolinha : MonoBehaviour
 {
     public Rigidbody2D ball;
     public float speed = 10f;
+    public GameObject painel;
 
     void Start()
     {
@@ -30,6 +31,17 @@ public class Bolinha : MonoBehaviour
             Vector2 movement = new Vector2(tilt.x, tilt.y);
 
             ball.AddForce(movement * speed);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Final")) 
+        {
+            if (painel != null)
+            {
+                painel.SetActive(true);
+            }
         }
     }
 }

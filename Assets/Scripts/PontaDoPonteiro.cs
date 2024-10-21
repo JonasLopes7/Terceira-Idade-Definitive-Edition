@@ -19,6 +19,7 @@ public class PontaDoPonteiro : MonoBehaviour
         {
             positioned = true;
             ponteiroManager.PonteiroPosicionadoCorretamente();
+            Debug.Log("ENTROU POHAAAAAA");
         }
     }
 

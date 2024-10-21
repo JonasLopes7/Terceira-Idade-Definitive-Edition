@@ -1,35 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PonteiroMan : MonoBehaviour
 {
+    public HorasTagEditor horaTagData;
+    private int currentHoraIndex = 0;
+    public Text textoHoraDisplay;
+
+    public PontaDoPonteiro ponteiroHora;
+    public PontaDoPonteiro ponteiroMinuto;
+
     public int ponteirosCorretos = 0;
     public int totalDePonteiros = 2;
+
+    private PointMan pointManager;
     public GameObject[] spawnPoints;
     private ObjectMan objectManager;
     public GameObject p1;
     public GameObject p2;
     public GameObject num;
     public GameObject man;
-    private PointMan pointManager;
     public GameObject textoHora;
 
     void Start()
     {
-        objectManager = FindObjectOfType<ObjectMan>();
         pointManager = FindObjectOfType<PointMan>();
+        AtualizarHoraTag();
     }
 
     public void PonteiroPosicionadoCorretamente()
     {
         ponteirosCorretos++;
         VerificaPonteiros();
+        Debug.Log("AUMENTOU ESSA MERDA");
     }
 
     public void PonteiroRemovidoDaPosicao()
     {
         ponteirosCorretos--;
+        Debug.Log("DIMINUIU ESSE KRL");
     }
 
     private void VerificaPonteiros()
@@ -53,6 +64,9 @@ public class PonteiroMan : MonoBehaviour
             rodaroda2.enabled = false;
             Debug.Log("eu juro q eu vou me matar mano");
 
+            AtualizarHoraTag();
+            ponteirosCorretos = 0;
+
             if (pointManager != null)
             {
                 pointManager.AddPoint();
@@ -60,25 +74,27 @@ public class PonteiroMan : MonoBehaviour
         }
     }
 
-    private void TeleportPonteiros()
+        private void TeleportPonteiros()
     {
         PontaDoPonteiro[] pontas = FindObjectsOfType<PontaDoPonteiro>();
-        foreach (PontaDoPonteiro ponta in pontas)
+    foreach (PontaDoPonteiro ponta in pontas)
+    {
+        ponta.positioned = false;
+
+        Transform ponteiroPai = ponta.transform.parent;
+
+        int randomIndex = Random.Range(0, spawnPoints.Length);
+        Vector3 randomPosition = spawnPoints[randomIndex].transform.position;
+
+        ponteiroPai.position = randomPosition;
+
+        DragAndDrop dragAndDrop = ponteiroPai.GetComponent<DragAndDrop>();
+        if (dragAndDrop != null)
         {
-            Transform ponteiroPai = ponta.transform.parent;
-
-            int randomIndex = Random.Range(0, spawnPoints.Length);
-            Vector3 randomPosition = spawnPoints[randomIndex].transform.position;
-
-            ponteiroPai.position = randomPosition;
-
-            DragAndDrop dragAndDrop = ponteiroPai.GetComponent<DragAndDrop>();
-            if (dragAndDrop != null)
-            {
-                dragAndDrop.Teleport();
-                dragAndDrop.hasIncremented = false;
-            }
+            dragAndDrop.Teleport();
+            dragAndDrop.hasIncremented = false;
         }
+    }
     }
 
     private void TeleportNumeros()
@@ -98,5 +114,19 @@ public class PonteiroMan : MonoBehaviour
 
         Debug.Log("Pericles");
     }
+    }
+
+    private void AtualizarHoraTag()
+    {
+        currentHoraIndex = Random.Range(0, horaTagData.horaMinutoTags.Length);
+
+        HorasTag horaAtual = horaTagData.horaMinutoTags[currentHoraIndex];
+
+        textoHoraDisplay.text = horaAtual.horaTexto;
+
+        ponteiroHora.horaTag = horaAtual.tagHora;
+        ponteiroMinuto.horaTag = horaAtual.tagMinuto;
+
+        Debug.Log($"Novo horário: {horaAtual.horaTexto}, Hora Tag: {horaAtual.tagHora}, Minuto Tag: {horaAtual.tagMinuto}");
     }
 }

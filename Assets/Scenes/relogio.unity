@@ -720,6 +720,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1284761586}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &432193549 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7816307476438126570, guid: 43db0de310d2e5340b973170f9e2b780, type: 3}
+  m_PrefabInstance: {fileID: 203556088936154051}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6667f67b5f2582f4cbe4d926cab6498c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &552302173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,10 +1144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9030b8244323a54c85264f31e4ceaa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horaTagData: {fileID: 0}
-  textoHoraDisplay: {fileID: 0}
-  ponteiroHora: {fileID: 0}
-  ponteiroMinuto: {fileID: 0}
+  horaTagData: {fileID: 11400000, guid: f577ced9f86ad8f46be73220ff397864, type: 2}
+  textoHoraDisplay: {fileID: 1094067372}
+  ponteiroHora: {fileID: 432193549}
+  ponteiroMinuto: {fileID: 1325408760}
   ponteirosCorretos: 0
   totalDePonteiros: 2
   spawnPoints:
@@ -1906,6 +1917,17 @@ Transform:
   - {fileID: 1841886289}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1325408760 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7887189312221010184, guid: 9fa15f87df0bf9344a9dfca68bb883c7, type: 3}
+  m_PrefabInstance: {fileID: 3732931698565217366}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6667f67b5f2582f4cbe4d926cab6498c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1326441402
 GameObject:
   m_ObjectHideFlags: 0

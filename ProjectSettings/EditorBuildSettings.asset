@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/labirinto.unity
     guid: de82eb9df307afb4797fc57f9fde5256
+  - enabled: 1
+    path: Assets/Scenes/inicio.unity
+    guid: 44fdc36754cf1f748af5146676f6d8e2
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 571b97757dec0cc47b3c2698bda8162d, type: 2}

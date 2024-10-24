@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d89a4e64189b10e41a0a5381330e41b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardPrefab: {fileID: 593906663955633476, guid: b129507bf6a0bd74f8d9b44d8439c3c0, type: 3}
+  cardPrefab: {fileID: 6523566856952338841, guid: 0419b19b7833e6b428d3539fa10d9bd5, type: 3}
   cardParent: {fileID: 371349499}
   rows: 3
   columns: 1
@@ -561,7 +561,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -148.13, y: -44.059998}
+  m_AnchoredPosition: {x: -148.13, y: -44.06006}
   m_SizeDelta: {x: 62.75, y: 16.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1544953540
@@ -924,10 +924,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

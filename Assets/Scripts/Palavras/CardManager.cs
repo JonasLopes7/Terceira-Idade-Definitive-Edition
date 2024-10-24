@@ -7,6 +7,7 @@ public class CardManager : MonoBehaviour
 {
     public Text scoreText;
     public Text scoreText2;
+    public Text highScoreText;
     private int score;
     private int totalAnimalCards;
     private int highScore;
@@ -22,19 +23,21 @@ public class CardManager : MonoBehaviour
         highScore = PlayerPrefs.GetInt("HighScoreCard", 0);
 
         score = 0;
-        scoreText.text = "Score: " + score;
-        scoreText2.text = "Score: " + score;
+        scoreText.text = "Pontos: " + score;
+        scoreText2.text = "Sua pontuação foi: " + score;
+        highScoreText.text = "Melhor pontuação: " + highScore;
     }
 
     public void UpdateScore(int amount)
     {
         score += amount;
-        scoreText.text = "Score: " + score;
-        scoreText2.text = "Score: " + score;
+        scoreText.text = "Pontos: " + score;
+        scoreText2.text = "Sua pontuação foi: " + score;
 
         if (score > highScore)
         {
             highScore = score;
+            highScoreText.text = "Novo Recorde: " + highScore;
             PlayerPrefs.SetInt("HighScoreCard", highScore);
             PlayerPrefs.Save();
         }

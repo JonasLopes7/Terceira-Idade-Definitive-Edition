@@ -2666,8 +2666,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 18118157117189631, guid: ecff9e63a0d462c4ba94f728be866f32, type: 3}
+      propertyPath: minigame1Index
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 18118157117189631, guid: ecff9e63a0d462c4ba94f728be866f32, type: 3}
+      propertyPath: minigame2Index
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 18118157117189631, guid: ecff9e63a0d462c4ba94f728be866f32, type: 3}
       propertyPath: sceneNames.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 18118157117189631, guid: ecff9e63a0d462c4ba94f728be866f32, type: 3}
+      propertyPath: tutorialSceneMinigame1
+      value: tutorial rel
+      objectReference: {fileID: 0}
+    - target: {fileID: 18118157117189631, guid: ecff9e63a0d462c4ba94f728be866f32, type: 3}
+      propertyPath: tutorialSceneMinigame2
+      value: tutorial pal
       objectReference: {fileID: 0}
     - target: {fileID: 18118157117189631, guid: ecff9e63a0d462c4ba94f728be866f32, type: 3}
       propertyPath: sceneNames.Array.data[0]

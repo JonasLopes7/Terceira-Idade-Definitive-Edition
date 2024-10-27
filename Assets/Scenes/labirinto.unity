@@ -2758,6 +2758,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneNames:
   - menu
+  tutorialSceneMinigame1: TutorialMinigame1
+  tutorialSceneMinigame2: TutorialMinigame2
+  minigame1Index: 10
+  minigame2Index: 10
 --- !u!4 &1062084390
 Transform:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class PontaDoPonteiro : MonoBehaviour
     {
         if (other.CompareTag(horaTag) && !positioned)
         {
+            //ponteiro na posicao certa
             positioned = true;
             ponteiroManager.PonteiroPosicionadoCorretamente();
             Debug.Log("ENTROU POHAAAAAA");
@@ -27,6 +28,7 @@ public class PontaDoPonteiro : MonoBehaviour
     {
         if (other.CompareTag(horaTag) && positioned)
         {
+            //ponteiro na posicao errada
             positioned = false;
             ponteiroManager.PonteiroRemovidoDaPosicao();
         }

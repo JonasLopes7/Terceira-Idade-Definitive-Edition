@@ -26,12 +26,14 @@ public class PonteiroMan : MonoBehaviour
 
     void Start()
     {
+        //importa o horario gerado
         pointManager = FindObjectOfType<PointMan>();
         AtualizarHoraTag();
     }
 
     public void PonteiroPosicionadoCorretamente()
     {
+        //diz que o ponteiro ta perto da posicao certa
         ponteirosCorretos++;
         VerificaPonteiros();
         Debug.Log("AUMENTOU ESSA MERDA");
@@ -39,6 +41,7 @@ public class PonteiroMan : MonoBehaviour
 
     public void PonteiroRemovidoDaPosicao()
     {
+        //diz que o ponteiro saiu da posicao certa
         ponteirosCorretos--;
         Debug.Log("DIMINUIU ESSE KRL");
     }
@@ -48,7 +51,7 @@ public class PonteiroMan : MonoBehaviour
         if (ponteirosCorretos >= totalDePonteiros)
         {
             Debug.Log("Todos os ponteiros estão na posição correta!");
-
+            //verifica se os ponteiros estao na posicao certa
             TeleportPonteiros();
             TeleportNumeros();
 
@@ -76,6 +79,7 @@ public class PonteiroMan : MonoBehaviour
 
         private void TeleportPonteiros()
     {
+        //funcao que teleporta o ponteiro pra posicao certa quando tocado no collider
         PontaDoPonteiro[] pontas = FindObjectsOfType<PontaDoPonteiro>();
     foreach (PontaDoPonteiro ponta in pontas)
     {
@@ -99,6 +103,7 @@ public class PonteiroMan : MonoBehaviour
 
     private void TeleportNumeros()
     {
+        //funcao que teleporta o numero pra posicao certa quando tocado no collider
         if (num != null)
     {
         int randomIndex = Random.Range(0, spawnPoints.Length);
@@ -118,6 +123,7 @@ public class PonteiroMan : MonoBehaviour
 
     private void AtualizarHoraTag()
     {
+        //funcao que atualiza a tag de hora
         currentHoraIndex = Random.Range(0, horaTagData.horaMinutoTags.Length);
 
         HorasTag horaAtual = horaTagData.horaMinutoTags[currentHoraIndex];

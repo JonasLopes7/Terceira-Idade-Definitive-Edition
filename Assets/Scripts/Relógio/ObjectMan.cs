@@ -36,6 +36,7 @@ public class ObjectMan : MonoBehaviour
 
     private void ActivateDragToRotate()
     {
+        //aumenta ou diminui a quantidade de objetos posicionados corretamente
         foreach (DragAndDrop draggable in draggableObjects)
         {
             DragToRotate rotateScript = draggable.GetComponent<DragToRotate>();

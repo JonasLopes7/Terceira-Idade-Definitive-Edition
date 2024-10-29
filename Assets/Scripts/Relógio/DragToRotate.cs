@@ -30,6 +30,7 @@ public class DragToRotate : MonoBehaviour
 {
     if (!enabled) return;
     isDragging = true;
+    //Debug.Log("apertou mouse");
 }
 
 void OnMouseDrag()
@@ -43,11 +44,13 @@ void OnMouseDrag()
     float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
     transform.RotateAround(pivotPoint.position, Vector3.forward, angle - transform.eulerAngles.z);
+    //Debug.Log("segurou mouse");
 }
 
 void OnMouseUp()
 {
     if (!enabled) return;
     isDragging = false;
+    //Debug.Log("soltou mouse");
 }
 }

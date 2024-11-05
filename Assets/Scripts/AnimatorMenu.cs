@@ -9,28 +9,34 @@ public class AnimatorMenu : MonoBehaviour
     public GameObject panelRel;
     private Animator animatorPalavra;
     private Animator animatorRelogio;
-    public CanvasGroup canvasGroup;
 
     void Start()
     {
         animatorPalavra = panelPal.GetComponent<Animator>();
         animatorRelogio = panelRel.GetComponent<Animator>();
-        panelPal.SetActive(false);
+        panelPal.SetActive(true);
         panelRel.SetActive(false);
     }
-
+    public void ShowPal() 
+    {
+        ShowPanelPal();
+        HidePanelRel();    //mostra o panelPal e esconde o panelRel
+    } 
+    public void ShowRel()
+    {
+        ShowPanelRel();
+        HidePanelPal();   //mostra o panelRel e esconde o panelPal
+    }
     public void ShowPanelPal()
     {
         panelPal.SetActive(true);
         animatorPalavra.Play("animacaoPainelPalavra");
-        canvasGroup.interactable = false;
     }
 
     public void HidePanelPal()
     {
         animatorPalavra.Play("animacaoPainelPalavraVolta");
         Invoke("DisablePanelPal", 0.5f);
-        canvasGroup.interactable = true;
     }
 
     private void DisablePanelPal()
@@ -41,14 +47,12 @@ public class AnimatorMenu : MonoBehaviour
     {
         panelRel.SetActive(true);
         animatorRelogio.Play("animacaoPainelRelogio");
-        canvasGroup.interactable = false;
     }
 
     public void HidePanelRel()
     {
         animatorRelogio.Play("animacaoPainelRelogioVolta");
         Invoke("DisablePanelRel", 0.5f);
-        canvasGroup.interactable = true;
     }
 
     private void DisablePanelRel()

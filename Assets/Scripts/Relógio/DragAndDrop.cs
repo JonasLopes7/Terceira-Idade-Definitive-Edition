@@ -50,7 +50,7 @@ public class DragAndDrop : MonoBehaviour
 
         if (isCorrectlyPlaced && targetCollider != null && !hasIncremented) // Verifica se já foi incrementado
         {
-            transform.position = targetCollider.transform.position;
+            transform.position = targetCollider.transform.position + new Vector3(0, 0, -5);
 
             // Incrementa o contador apenas uma vez
             objectManager.IncrementCorrectlyPlacedCount();

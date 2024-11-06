@@ -50,7 +50,7 @@ public class TimerScript : MonoBehaviour
             countdown--;
         }
 
-        countdownText.text = "GO!";
+        countdownText.text = "VAI!";
         yield return new WaitForSeconds(1f);
 
         countdownText.gameObject.SetActive(false);

@@ -32,6 +32,7 @@ public class SceneMan : MonoBehaviour
             else
             {
                 SceneManager.LoadScene(sceneNames[index]);
+                Time.timeScale = 1;
             }
         }
         else

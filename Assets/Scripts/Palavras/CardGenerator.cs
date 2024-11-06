@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
@@ -12,6 +13,8 @@ public class CardGenerator : MonoBehaviour
     public List<string> normalWords;
     public int totalCards = 12;
     public int animalCardCount = 4;
+
+    public GameObject panelErro;
 
     private List<string> tempAnimalWords;
     private List<string> tempNormalWords;
@@ -123,9 +126,17 @@ public class CardGenerator : MonoBehaviour
     }
 
     public void OnWrongWordClick()
-    {
-        ResetGame();
-    }
+{
+    panelErro.SetActive(true);
+    StartCoroutine(DelayedResetGame());
+}
+
+private IEnumerator DelayedResetGame()
+{
+    yield return new WaitForSeconds(1f);
+    ResetGame();
+    panelErro.SetActive(false);
+}
 
     public void OnAllAnimalsClicked()
     {

@@ -23,7 +23,7 @@ public class CardManager : MonoBehaviour
         highScore = PlayerPrefs.GetInt("HighScoreCard", 0);
 
         score = 0;
-        scoreText.text = "Pontos: " + score;
+        scoreText.text = score.ToString();
         scoreText2.text = "Sua pontuação foi: " + score;
         highScoreText.text = "Melhor pontuação: " + highScore;
     }
@@ -31,7 +31,7 @@ public class CardManager : MonoBehaviour
     public void UpdateScore(int amount)
     {
         score += amount;
-        scoreText.text = "Pontos: " + score;
+        scoreText.text = score.ToString();
         scoreText2.text = "Sua pontuação foi: " + score;
 
         if (score > highScore)

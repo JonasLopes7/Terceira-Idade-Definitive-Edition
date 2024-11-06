@@ -16,14 +16,14 @@ public class PointMan : MonoBehaviour
         highScore = PlayerPrefs.GetInt("HighScoreClock", 0);
         highScoreText.text = "Melhor pontuação: " + highScore;
 
-        scoreText.text = "Pontos: " + score;
+        scoreText.text = score.ToString();
         finalText.text = "Sua pontuação foi: " + score;
     }
 
     public void AddPoint()
     {
         score++;
-        scoreText.text = "Pontos: " + score;
+        scoreText.text = score.ToString();
         finalText.text = "Sua pontuação foi: " + score;
 
         if (score > highScore)

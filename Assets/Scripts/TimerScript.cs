@@ -11,7 +11,7 @@ public class TimerScript : MonoBehaviour
     public GameObject panel;
     public GameObject panelCountdown;
 
-    private bool timerIsRunning = false;
+    public bool timerIsRunning = false;
     private bool countdownFinished = false;
 
     void Start()

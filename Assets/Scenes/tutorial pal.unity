@@ -2149,8 +2149,8 @@ MonoBehaviour:
     objectsToDeactivate:
     - {fileID: 555315408}
     - {fileID: 375311598}
-  - instructionText: "Conforme voc\xEA pontua, a dificuldade aumenta acrecentando
-      mais cartas ao jogo"
+  - instructionText: "Conforme voc\xEA pontua, a dificuldade aumenta e mais cartas
+      s\xE3o adicionadas no jogo."
     minigameAnimation: {fileID: 1111538809}
     targetPositions: []
     objectsToActivate:
@@ -2178,6 +2178,7 @@ MonoBehaviour:
   - {fileID: 2068615455}
   objectsToMove: []
   ultimoObj: {fileID: 1632491645}
+  ultimoObj2: {fileID: 1632491645}
   botaoCena: {fileID: 1436918129}
 --- !u!1 &1641068737
 GameObject:

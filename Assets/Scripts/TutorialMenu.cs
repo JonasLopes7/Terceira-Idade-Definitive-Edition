@@ -23,7 +23,12 @@ public class TutorialMenu : MonoBehaviour
 
     void Start()
     {
-
+        if (!PlayerPrefs.HasKey("TutorialVisto"))
+        {
+            IniciarTutorial();
+            PlayerPrefs.SetInt("TutorialVisto", 1);
+            PlayerPrefs.Save();
+        }
     }
 
     void Update()
@@ -34,7 +39,6 @@ public class TutorialMenu : MonoBehaviour
         }
     }
 
-    // Método chamado pelo botão para iniciar o tutorial
     public void IniciarTutorial()
     {
         tutorialAtivo = true;
@@ -47,20 +51,17 @@ public class TutorialMenu : MonoBehaviour
     {
         if (indice < etapasTutorial.Count)
         {
-            // Atualiza o texto para a etapa atual
             caixaTexto.text = etapasTutorial[indice].textoEtapa;
 
-            // Ativa e desativa objetos conforme a etapa
             foreach (var obj in etapasTutorial[indice].objetosAtivar)
             {
-                obj.SetActive(true); // Apenas ativa objetos
+                obj.SetActive(true);
             }
             foreach (var obj in etapasTutorial[indice].objetosDesativar)
             {
-                obj.SetActive(false); // Apenas desativa objetos
+                obj.SetActive(false);
             }
 
-            // Ativa animações conforme a etapa
             foreach (var anim in etapasTutorial[indice].animacoesAtivar)
             {
                 anim.SetTrigger("Ativar");
@@ -78,7 +79,6 @@ public class TutorialMenu : MonoBehaviour
         }
         else
         {
-            // Finaliza o tutorial
             painelTutorial.SetActive(false);
             tutorialAtivo = false;
         }

@@ -13,7 +13,7 @@ public class StatsMan : MonoBehaviour
         int highScore = PlayerPrefs.GetInt("HighScoreCard", 0);
         int highScoreClock = PlayerPrefs.GetInt("HighScoreClock", 0);
 
-        highScoreClockText.text = "High Score Relogio: " + highScoreClock;
-        highScoreText.text = "High Score Palavra: " + highScore;
+        highScoreClockText.text = "Melhor Pontuação: " + highScoreClock;
+        highScoreText.text = "Melhor Pontuação: " + highScore;
     }
 }

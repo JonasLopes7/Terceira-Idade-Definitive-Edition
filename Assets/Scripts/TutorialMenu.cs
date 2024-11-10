@@ -20,15 +20,34 @@ public class TutorialMenu : MonoBehaviour
 
     private int etapaAtual = 0;
     private bool tutorialAtivo = false;
+    public Button botaoIniciarTutorial;
 
     void Start()
     {
+        if (PlayerPrefs.HasKey("TutorialVisto"))
+        {
+            botaoIniciarTutorial.gameObject.SetActive(false);
+        }
+    }
+
+    public void VerificarTutorial()
+    {
         if (!PlayerPrefs.HasKey("TutorialVisto"))
         {
-            IniciarTutorial();
+            StartCoroutine(IniciarTutorialComDelay(140));
             PlayerPrefs.SetInt("TutorialVisto", 1);
             PlayerPrefs.Save();
+            botaoIniciarTutorial.gameObject.SetActive(false);
         }
+    }
+
+    private IEnumerator IniciarTutorialComDelay(int delayFrames)
+    {
+        for (int i = 0; i < delayFrames; i++)
+        {
+            yield return null;
+        }
+        IniciarTutorial();
     }
 
     void Update()

@@ -34,7 +34,7 @@ public class TutorialMenu : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("TutorialVisto"))
         {
-            StartCoroutine(IniciarTutorialComDelay(140));
+            StartCoroutine(IniciarTutorialComDelay(30));
             PlayerPrefs.SetInt("TutorialVisto", 1);
             PlayerPrefs.Save();
             botaoIniciarTutorial.gameObject.SetActive(false);

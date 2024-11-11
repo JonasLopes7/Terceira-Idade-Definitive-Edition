@@ -13,12 +13,93 @@ MonoBehaviour:
   m_Name: Teste
   m_EditorClassIdentifier: 
   horaMinutoTags:
+  - horaTexto: 06:00
+    tagHora: 6
+    tagMinuto: 12
+  - horaTexto: 06:15
+    tagHora: 6
+    tagMinuto: 3
   - horaTexto: 06:30
     tagHora: 6
     tagMinuto: 6
+  - horaTexto: 06:45
+    tagHora: 6
+    tagMinuto: 9
+  - horaTexto: 18:00
+    tagHora: 6
+    tagMinuto: 12
+  - horaTexto: 18:15
+    tagHora: 6
+    tagMinuto: 3
+  - horaTexto: 18:30
+    tagHora: 6
+    tagMinuto: 6
+  - horaTexto: 18:45
+    tagHora: 6
+    tagMinuto: 9
+  - horaTexto: 12:00
+    tagHora: 12
+    tagMinuto: 12
+  - horaTexto: 12:30
+    tagHora: 12
+    tagMinuto: 6
+  - horaTexto: 12:45
+    tagHora: 12
+    tagMinuto: 9
+  - horaTexto: 00:00
+    tagHora: 12
+    tagMinuto: 12
+  - horaTexto: 00:30
+    tagHora: 12
+    tagMinuto: 6
+  - horaTexto: 00:45
+    tagHora: 12
+    tagMinuto: 9
   - horaTexto: 09:00
     tagHora: 9
     tagMinuto: 12
+  - horaTexto: 09:15
+    tagHora: 9
+    tagMinuto: 3
+  - horaTexto: 09:30
+    tagHora: 9
+    tagMinuto: 6
+  - horaTexto: 09:45
+    tagHora: 9
+    tagMinuto: 9
+  - horaTexto: 21:00
+    tagHora: 9
+    tagMinuto: 12
+  - horaTexto: 21:15
+    tagHora: 9
+    tagMinuto: 3
+  - horaTexto: 21:30
+    tagHora: 9
+    tagMinuto: 6
+  - horaTexto: 21:45
+    tagHora: 9
+    tagMinuto: 9
+  - horaTexto: 03:00
+    tagHora: 3
+    tagMinuto: 12
+  - horaTexto: 03:15
+    tagHora: 3
+    tagMinuto: 3
+  - horaTexto: 03:30
+    tagHora: 3
+    tagMinuto: 6
   - horaTexto: 03:45
+    tagHora: 3
+    tagMinuto: 9
+  - horaTexto: 15:00
+    tagHora: 3
+    tagMinuto: 12
+  - horaTexto: 15:15
+    tagHora: 3
+    tagMinuto: 3
+  - horaTexto: 15:30
+    tagHora: 3
+    tagMinuto: 6
+  - horaTexto: 15:45
     tagHora: 3
     tagMinuto: 9

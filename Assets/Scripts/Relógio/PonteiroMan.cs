@@ -7,6 +7,7 @@ public class PonteiroMan : MonoBehaviour
 {
     public HorasTagEditor horaTagData;
     private int currentHoraIndex = 0;
+    private int ultimoHoraIndex = -1;
     public Text textoHoraDisplay;
 
     public PontaDoPonteiro ponteiroHora;
@@ -118,7 +119,14 @@ public class PonteiroMan : MonoBehaviour
 
     private void AtualizarHoraTag()
     {
-        currentHoraIndex = Random.Range(0, horaTagData.horaMinutoTags.Length);
+        int currentHoraIndex;
+
+        do
+        {
+            currentHoraIndex = Random.Range(0, horaTagData.horaMinutoTags.Length);
+        } while (currentHoraIndex == ultimoHoraIndex);
+
+        ultimoHoraIndex = currentHoraIndex;
 
         HorasTag horaAtual = horaTagData.horaMinutoTags[currentHoraIndex];
 

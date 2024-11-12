@@ -24,6 +24,8 @@ public class PonteiroMan : MonoBehaviour
     public GameObject num;
     public GameObject man;
     public GameObject textoHora;
+    public GameObject objetoDeCobertura; // Objeto que cobre o minigame
+    public float intervaloDeEspera = 1.0f;
 
     void Start()
     {
@@ -48,30 +50,42 @@ public class PonteiroMan : MonoBehaviour
     {
         if (ponteirosCorretos >= totalDePonteiros)
         {
-            Debug.Log("Todos os ponteiros estão na posição correta!");
+            StartCoroutine(ExecutarComIntervalo());
+        }
+    }
 
-            TeleportPonteiros();
-            TeleportNumeros();
+    private IEnumerator ExecutarComIntervalo()
+    {
+        objetoDeCobertura.SetActive(true);
 
-            DragToRotate rodaroda1 = p1.GetComponent<DragToRotate>();
-            DragToRotate rodaroda2 = p2.GetComponent<DragToRotate>();
-            ObjectMan objectMan = man.GetComponent<ObjectMan>();
+        DragToRotate rodaroda1 = p1.GetComponent<DragToRotate>();
+        DragToRotate rodaroda2 = p2.GetComponent<DragToRotate>();
+        ObjectMan objectMan = man.GetComponent<ObjectMan>();
 
-            objectMan.correctlyPlacedCount = 0;
+        objectMan.correctlyPlacedCount = 0;
 
-            textoHora.SetActive(false);
+        rodaroda1.enabled = false;
+        rodaroda2.enabled = false;
 
-            rodaroda1.enabled = false;
-            rodaroda2.enabled = false;
-            Debug.Log("eu juro q eu vou me matar mano");
+        //tudo acima dessa linha vai acontecer durante/antes do cooldownzinho de quando tu acerta
+        yield return new WaitForSeconds(intervaloDeEspera);
+        //tudo abaixo dessa linha vai acontecer soh dps do cooldown, entao por exemplo, logo acima ta desativando o script de rotacao do ponteiro pra ele travar, mas aqui embaixo tem o script q teleporta o ponteiro, pq ele tem q ficar um pouco na posicao antes dele teleportar
 
-            AtualizarHoraTag();
-            ponteirosCorretos = 0;
+        textoHora.SetActive(false);
 
-            if (pointManager != null)
-            {
-                pointManager.AddPoint();
-            }
+        objetoDeCobertura.SetActive(false);
+
+        Debug.Log("Todos os ponteiros estão na posição correta!");
+        TeleportPonteiros();
+        TeleportNumeros();
+        Debug.Log("Intervalo concluído!");
+
+        AtualizarHoraTag();
+        ponteirosCorretos = 0;
+
+        if (pointManager != null)
+        {
+            pointManager.AddPoint();
         }
     }
 

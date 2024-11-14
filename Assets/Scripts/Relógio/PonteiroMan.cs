@@ -27,10 +27,14 @@ public class PonteiroMan : MonoBehaviour
     public GameObject objetoDeCobertura; // Objeto que cobre o minigame
     public float intervaloDeEspera = 1.0f;
 
+    public AudioClip pointSound;
+    private AudioSource audioSource;
+
     void Start()
     {
         pointManager = FindObjectOfType<PointMan>();
         AtualizarHoraTag();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void PonteiroPosicionadoCorretamente()
@@ -66,6 +70,8 @@ public class PonteiroMan : MonoBehaviour
 
         rodaroda1.enabled = false;
         rodaroda2.enabled = false;
+
+        audioSource.PlayOneShot(pointSound);
 
         //tudo acima dessa linha vai acontecer durante/antes do cooldownzinho de quando tu acerta
         yield return new WaitForSeconds(intervaloDeEspera);

@@ -16,6 +16,10 @@ public class CardManager : MonoBehaviour
     public int correctStreak = 0;
     private bool hasIncreasedCards = false;
 
+    public AudioClip acertoSound;
+    public AudioClip erroSound;
+    private AudioSource audioSource;
+
     void Start()
     {
         cardGenerator = FindObjectOfType<CardGenerator>();
@@ -26,6 +30,7 @@ public class CardManager : MonoBehaviour
         scoreText.text = score.ToString();
         scoreText2.text = "Sua pontuação foi: " + score;
         highScoreText.text = "Melhor pontuação: " + highScore;
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void UpdateScore(int amount)
@@ -54,6 +59,8 @@ public class CardManager : MonoBehaviour
         {
             correctStreak++;
             Debug.Log("clickou");
+
+            audioSource.PlayOneShot(acertoSound);
             
             if (correctStreak == 4 && !hasIncreasedCards)
             {
@@ -64,6 +71,7 @@ public class CardManager : MonoBehaviour
         else
         {
             correctStreak = 0;
+            audioSource.PlayOneShot(erroSound);
         }
     }
 }

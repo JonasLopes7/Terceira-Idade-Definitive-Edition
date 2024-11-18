@@ -2820,6 +2820,7 @@ MonoBehaviour:
   panel: {fileID: 1641068737}
   panelCountdown: {fileID: 1090648376}
   timerIsRunning: 0
+  dica: {fileID: 0}
 --- !u!114 &1632491649
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -29,6 +29,7 @@ public class PonteiroMan : MonoBehaviour
 
     public AudioClip pointSound;
     private AudioSource audioSource;
+    public Text dica;
 
     void Start()
     {
@@ -77,6 +78,8 @@ public class PonteiroMan : MonoBehaviour
         yield return new WaitForSeconds(intervaloDeEspera);
         //tudo abaixo dessa linha vai acontecer soh dps do cooldown, entao por exemplo, logo acima ta desativando o script de rotacao do ponteiro pra ele travar, mas aqui embaixo tem o script q teleporta o ponteiro, pq ele tem q ficar um pouco na posicao antes dele teleportar
 
+        dica.text = "Arraste as peças!";
+        
         textoHora.SetActive(false);
 
         objetoDeCobertura.SetActive(false);

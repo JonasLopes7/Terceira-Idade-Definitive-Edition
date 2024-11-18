@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectMan : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class ObjectMan : MonoBehaviour
     public const int totalRequired = 3;
     public bool isActivated = false;
     public GameObject textoHora;
+    public Text dica;
 
     void Update()
     {
@@ -39,6 +41,7 @@ public class ObjectMan : MonoBehaviour
         foreach (DragAndDrop draggable in draggableObjects)
         {
             DragToRotate rotateScript = draggable.GetComponent<DragToRotate>();
+            dica.text = "Gire os ponteiros!";
             if (rotateScript != null)
             {
                 rotateScript.enabled = true;

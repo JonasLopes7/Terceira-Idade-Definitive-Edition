@@ -13,6 +13,7 @@ public class TimerScript : MonoBehaviour
 
     public bool timerIsRunning = false;
     private bool countdownFinished = false;
+    public GameObject dica;
 
     void Start()
     {
@@ -54,6 +55,10 @@ public class TimerScript : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         countdownText.gameObject.SetActive(false);
+        if (dica != null)
+        {
+            dica.gameObject.SetActive(true);
+        }
         panelCountdown.SetActive(false);
         countdownFinished = true;
         timerIsRunning = true;

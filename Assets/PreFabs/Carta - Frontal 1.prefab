@@ -228,3 +228,4 @@ MonoBehaviour:
   word: 
   isAnimal: 0
   generator: {fileID: 0}
+  feedbackTextPrefab: {fileID: 302818253074593993, guid: 3cf3c48f9f3a18840a16a69a2f953de1, type: 3}

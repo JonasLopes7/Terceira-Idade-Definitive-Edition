@@ -148,7 +148,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   word: 
   isAnimal: 0
-  scoreValue: 0
+  generator: {fileID: 0}
+  feedbackPrefab: {fileID: 8304612951556534778, guid: a65df224511954946adc95b9e1b3b53a, type: 3}
 --- !u!1 &4532005695008968121
 GameObject:
   m_ObjectHideFlags: 0

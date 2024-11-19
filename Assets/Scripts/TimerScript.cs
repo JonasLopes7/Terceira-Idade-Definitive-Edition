@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class TimerScript : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class TimerScript : MonoBehaviour
     public bool timerIsRunning = false;
     private bool countdownFinished = false;
     public GameObject dica;
+
+    public AudioMixer audioMixer;
+    private float originalVolume = -30f;
 
     void Start()
     {
@@ -36,6 +40,7 @@ public class TimerScript : MonoBehaviour
                 timeRemaining = 0;
                 timerIsRunning = false;
                 panel.SetActive(true);
+                audioMixer.SetFloat("Musica", originalVolume);
             }
         }
     }

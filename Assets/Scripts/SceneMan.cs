@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class SceneMan : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class SceneMan : MonoBehaviour
 
     public int minigame1Index;
     public int minigame2Index;
+
+    public AudioMixer audioMixer;
+    private float originalVolume = -20f;
 
     public void ChangeSceneByIndex(int index)
     {
@@ -33,6 +37,7 @@ public class SceneMan : MonoBehaviour
             {
                 SceneManager.LoadScene(sceneNames[index]);
                 Time.timeScale = 1;
+                audioMixer.SetFloat("Musica", originalVolume);
             }
         }
         else

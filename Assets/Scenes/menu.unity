@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 195034895}
   - component: {fileID: 195034894}
   m_Layer: 3
-  m_Name: Panel
+  m_Name: Panel capivara
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -559,7 +559,7 @@ GameObject:
   - component: {fileID: 200274811}
   - component: {fileID: 200274810}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas setas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -996,7 +996,7 @@ GameObject:
   - component: {fileID: 279749932}
   - component: {fileID: 279749933}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Text Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1154,7 +1154,7 @@ GameObject:
   - component: {fileID: 352230534}
   - component: {fileID: 352230533}
   m_Layer: 5
-  m_Name: Text (Legacy) (1)
+  m_Name: Text Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1236,7 +1236,7 @@ GameObject:
   - component: {fileID: 373136522}
   - component: {fileID: 373136521}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: Button Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1654,7 +1654,7 @@ GameObject:
   - component: {fileID: 396915691}
   - component: {fileID: 396915690}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Text Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1734,7 +1734,7 @@ GameObject:
   - component: {fileID: 459577266}
   - component: {fileID: 459577265}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas ajuda 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2250,7 +2250,7 @@ GameObject:
   - component: {fileID: 530227184}
   - component: {fileID: 530227183}
   m_Layer: 5
-  m_Name: Text (Legacy) (1)
+  m_Name: Text Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2570,7 +2570,7 @@ RectTransform:
   m_GameObject: {fileID: 614820380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 719933011}
@@ -3186,7 +3186,7 @@ GameObject:
   - component: {fileID: 798415874}
   - component: {fileID: 798415873}
   m_Layer: 3
-  m_Name: Panel
+  m_Name: Panel fixo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4144,7 +4144,7 @@ GameObject:
   - component: {fileID: 1075312374}
   - component: {fileID: 1075312373}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: Button Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4704,7 +4704,7 @@ GameObject:
   - component: {fileID: 1140453785}
   - component: {fileID: 1140453784}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas txt btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5848,7 +5848,7 @@ GameObject:
   - component: {fileID: 1428149032}
   - component: {fileID: 1428149031}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas txt btn 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6302,7 +6302,7 @@ GameObject:
   - component: {fileID: 1615677289}
   - component: {fileID: 1615677288}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas ajuda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

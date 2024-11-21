@@ -31,6 +31,9 @@ public class PonteiroMan : MonoBehaviour
     private AudioSource audioSource;
     public Text dica;
 
+    public GameObject ponta1;
+    public GameObject ponta2;
+
     void Start()
     {
         pointManager = FindObjectOfType<PointMan>();
@@ -118,6 +121,9 @@ public class PonteiroMan : MonoBehaviour
             dragAndDrop.Teleport();
             dragAndDrop.hasIncremented = false;
         }
+        
+        ponta1.SetActive(false);
+        ponta2.SetActive(false);
     }
     }
 

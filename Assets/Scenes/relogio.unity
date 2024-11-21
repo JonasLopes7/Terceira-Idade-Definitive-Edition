@@ -697,7 +697,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7816307476438126570, guid: 43db0de310d2e5340b973170f9e2b780, type: 3}
   m_PrefabInstance: {fileID: 203556088936154051}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 960443175}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6667f67b5f2582f4cbe4d926cab6498c, type: 3}
@@ -1953,6 +1953,8 @@ MonoBehaviour:
   isActivated: 0
   textoHora: {fileID: 1094067370}
   dica: {fileID: 1255404456}
+  ponta1: {fileID: 960443175}
+  ponta2: {fileID: 1284533017}
 --- !u!4 &746336131
 Transform:
   m_ObjectHideFlags: 0
@@ -2024,6 +2026,8 @@ MonoBehaviour:
   intervaloDeEspera: 1
   pointSound: {fileID: 8300000, guid: 00ecc32e535aff54c8e3ab8f8cd1364d, type: 3}
   dica: {fileID: 1255404456}
+  ponta1: {fileID: 960443175}
+  ponta2: {fileID: 1284533017}
 --- !u!114 &746336134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2949,6 +2953,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958687382}
   m_CullTransparentMesh: 1
+--- !u!1 &960443175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2306588775987897810, guid: 43db0de310d2e5340b973170f9e2b780, type: 3}
+  m_PrefabInstance: {fileID: 203556088936154051}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1031814406
 GameObject:
   m_ObjectHideFlags: 0
@@ -4053,6 +4062,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255404454}
   m_CullTransparentMesh: 1
+--- !u!1 &1284533017 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7368104529045752865, guid: 9fa15f87df0bf9344a9dfca68bb883c7, type: 3}
+  m_PrefabInstance: {fileID: 3732931698565217366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1284761585
 GameObject:
   m_ObjectHideFlags: 0
@@ -4097,7 +4111,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7887189312221010184, guid: 9fa15f87df0bf9344a9dfca68bb883c7, type: 3}
   m_PrefabInstance: {fileID: 3732931698565217366}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1284533017}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6667f67b5f2582f4cbe4d926cab6498c, type: 3}
@@ -4930,7 +4944,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -3152197367850390766, guid: 8867568b30a423343a9b407e3484b9c2, type: 2}
   m_audioClip: {fileID: 8300000, guid: 2667fe9af364406478eb806c0c659bc2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0

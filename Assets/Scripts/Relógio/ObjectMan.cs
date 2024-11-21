@@ -13,6 +13,9 @@ public class ObjectMan : MonoBehaviour
     public GameObject textoHora;
     public Text dica;
 
+    public GameObject ponta1;
+    public GameObject ponta2;
+
     void Update()
     {
         if (correctlyPlacedCount >= totalRequired && !isActivated)
@@ -20,6 +23,9 @@ public class ObjectMan : MonoBehaviour
             ActivateDragToRotate();
             isActivated = true;
             textoHora.SetActive(true);
+
+            ponta1.SetActive(true);
+            ponta2.SetActive(true);
         }
     }
 

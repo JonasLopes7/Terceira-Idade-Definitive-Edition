@@ -30,7 +30,8 @@ public class AnimatorMenu : MonoBehaviour
 
     public void GoMenu1()
     {
-        animator.Play("anim4");
+        animator.Play("pericles2");
+        Debug.Log("asdasda");
     }
 
     public void GoPlay2()
@@ -40,6 +41,7 @@ public class AnimatorMenu : MonoBehaviour
 
     public void GoMenu2()
     {
-        animator.Play("anim6");
+        animator.Play("pericles1");
+        Debug.Log("bbbbbb");
     }
 }

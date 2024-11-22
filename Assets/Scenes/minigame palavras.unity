@@ -1941,7 +1941,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 45
 --- !u!1 &961442005
 GameObject:
   m_ObjectHideFlags: 0
@@ -2816,7 +2816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27a2eca81fa18b4a98e7f366e217fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 30
+  timeRemaining: 45
   timerText: {fileID: 939475051}
   countdownText: {fileID: 343770522}
   panel: {fileID: 1641068737}

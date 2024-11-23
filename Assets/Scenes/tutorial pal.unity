@@ -2235,13 +2235,6 @@ MonoBehaviour:
     - {fileID: 555315408}
     objectsToDeactivate:
     - {fileID: 371349498}
-  - instructionText: 
-    minigameAnimation: {fileID: 1111538809}
-    targetPositions: []
-    objectsToActivate: []
-    objectsToDeactivate:
-    - {fileID: 555315408}
-    - {fileID: 375311598}
   - instructionText: "Pontue o m\xE1ximo que conseguir antes do tempo acabar!!!"
     minigameAnimation: {fileID: 1111538809}
     targetPositions: []

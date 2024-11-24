@@ -7515,7 +7515,7 @@ MonoBehaviour:
     - {fileID: 530227181}
     - {fileID: 195034892}
     animacoesAtivar: []
-  - textoEtapa: "Usando a seta abaixo voc\xEA pode trocar o jogo."
+  - textoEtapa: "Usando a seta ao lado voc\xEA pode trocar o jogo."
     objetosAtivar:
     - {fileID: 530227181}
     - {fileID: 352230531}
@@ -7551,7 +7551,7 @@ MonoBehaviour:
     - {fileID: 373136516}
     - {fileID: 1075312368}
     animacoesAtivar: []
-  - textoEtapa: "Se precisar de ajudar novamente, pressione o bot\xE3o Ajuda abaixo."
+  - textoEtapa: "Se precisar de ajuda novamente, pressione o bot\xE3o Ajuda abaixo."
     objetosAtivar:
     - {fileID: 195034892}
     - {fileID: 373136516}

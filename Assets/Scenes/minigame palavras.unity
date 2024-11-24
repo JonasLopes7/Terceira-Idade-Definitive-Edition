@@ -2012,7 +2012,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "P\xE1rabens!"
+  m_Text: "Parab\xE9ns!"
 --- !u!222 &961442008
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3218,9 +3218,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -3152197367850390766, guid: 8867568b30a423343a9b407e3484b9c2, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 2667fe9af364406478eb806c0c659bc2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6ea12940c718b1347835cb2dc8d6798a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0

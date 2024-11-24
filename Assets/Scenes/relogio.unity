@@ -4522,7 +4522,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "P\xE1rabens!"
+  m_Text: "Parab\xE9ns!"
 --- !u!222 &1578309890
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4615,7 +4615,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.17
+  m_Radius: 3.63025
 --- !u!1 &1678643799
 GameObject:
   m_ObjectHideFlags: 0
@@ -5080,9 +5080,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -3152197367850390766, guid: 8867568b30a423343a9b407e3484b9c2, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 2667fe9af364406478eb806c0c659bc2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 171695d009e4d4e479d06ff02850086f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6008,7 +6008,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 5025d3524e4869c489488792261c20d5, type: 3}
     - target: {fileID: 3149276802887212103, guid: 43db0de310d2e5340b973170f9e2b780, type: 3}
       propertyPath: m_Size.x
-      value: 1.5066187
+      value: 1.8349038
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149276802887212103, guid: 43db0de310d2e5340b973170f9e2b780, type: 3}
+      propertyPath: m_Size.y
+      value: 0.65796256
       objectReference: {fileID: 0}
     - target: {fileID: 3149276802887212103, guid: 43db0de310d2e5340b973170f9e2b780, type: 3}
       propertyPath: m_Offset.x
@@ -6067,6 +6071,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 528825053300076251, guid: 9fa15f87df0bf9344a9dfca68bb883c7, type: 3}
+      propertyPath: m_Size.x
+      value: 2.4873989
+      objectReference: {fileID: 0}
+    - target: {fileID: 528825053300076251, guid: 9fa15f87df0bf9344a9dfca68bb883c7, type: 3}
+      propertyPath: m_Size.y
+      value: 0.55045384
+      objectReference: {fileID: 0}
+    - target: {fileID: 528825053300076251, guid: 9fa15f87df0bf9344a9dfca68bb883c7, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.92764693
+      objectReference: {fileID: 0}
+    - target: {fileID: 528825053300076251, guid: 9fa15f87df0bf9344a9dfca68bb883c7, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1303257267252355040, guid: 9fa15f87df0bf9344a9dfca68bb883c7, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -6190,11 +6210,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2013046890633744045, guid: f9e44c8d22a01394d8cc1a542d13e6e1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.32
+      value: 1.591
       objectReference: {fileID: 0}
     - target: {fileID: 2013046890633744045, guid: f9e44c8d22a01394d8cc1a542d13e6e1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.4
+      value: -3.187
       objectReference: {fileID: 0}
     - target: {fileID: 2013046890633744045, guid: f9e44c8d22a01394d8cc1a542d13e6e1, type: 3}
       propertyPath: m_LocalPosition.z

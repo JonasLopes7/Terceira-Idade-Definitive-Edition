@@ -22,6 +22,8 @@ public class TutorialMan : MonoBehaviour
 
     public GameObject ultimoObj;
     public GameObject ultimoObj2;
+    public GameObject anima;
+    public GameObject anima2;
     public GameObject botaoCena;
 
     private int currentStep = 0;
@@ -81,6 +83,8 @@ public class TutorialMan : MonoBehaviour
         ultimoObj.SetActive(true);
         ultimoObj2.SetActive(true);
         botaoCena.SetActive(true);
+        anima.SetActive(false);
+        anima2.SetActive(true);
 
         foreach (var animation in minigameAnimations)
         {

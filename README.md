@@ -15,7 +15,7 @@
 
 ## Sobre o Projeto
 
-Este é um serious game desenvolvido para dispositivos móveis utilizando Unity 2D. O objetivo do jogo é educar e conscientizar os jogadores sobre [tema do jogo], através de uma experiência interativa e envolvente.
+Este é um serious game desenvolvido para dispositivos móveis utilizando Unity 2D. O objetivo do jogo é educar e conscientizar os jogadores sobre a terceira idade e incentivar os idosos a estimular o cérebro através de uma experiência interativa e envolvente.
 
 ## Como Jogar
 
@@ -36,7 +36,7 @@ Este é um serious game desenvolvido para dispositivos móveis utilizando Unity 
 
 ## Funcionalidades
 
-- **Educação Interativa:** Aprenda sobre [tema do jogo] de forma divertida e envolvente.
+- **Educação Interativa:** Estimule a mente de forma divertida e interativa.
 - **Missões e Desafios:** Complete missões e desafios para ganhar pontos.
 - **Feedback Personalizado:** Receba feedback e dicas para melhorar.
 - **Ranking:** Compare seu desempenho com outros jogadores.

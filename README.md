@@ -65,4 +65,4 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 Gabriel Lanna  - gabriellanna16@gmail.com
 
-Link do Projeto: [https://github.com/seu-usuario/serious-game-unity2d](https://jonasl777.itch.io/ativamente)
+Link do Projeto: [Ativamente](https://jonasl777.itch.io/ativamente)
